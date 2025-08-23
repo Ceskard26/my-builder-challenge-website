@@ -177,7 +177,7 @@ function initScrollAnimations() {
 
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
-    const LAMBDA_URL = 'YOUR_LAMBDA_FUNCTION_URL_HERE'; // Replace with your actual Lambda URL
+    const LAMBDA_URL = 'https://eujpxsoz2tqoqqk6tnpiqgjbne0oxymx.lambda-url.us-east-2.on.aws/'; // Replace with your actual Lambda URL
     
     if (contactForm) {
         contactForm.addEventListener('submit', async function(e) {

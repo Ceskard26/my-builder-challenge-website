@@ -3,136 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesar Carrasco - Personal Website</title>
+    <title>César Carrasco - Cloud Builder & AWS Enthusiast</title>
+    <meta name="description" content="César Carrasco - Professional Cloud Developer specializing in AWS, CI/CD, and AI/ML. AWS Builder Challenge contestant showcasing modern web solutions.">
+    <meta name="keywords" content="AWS, Cloud Computing, DevOps, CI/CD, Machine Learning, César Carrasco">
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="César Carrasco - Cloud Builder & AWS Enthusiast">
+    <meta property="og:description" content="Professional Cloud Developer specializing in AWS, CI/CD, and AI/ML">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <section class="hero">
-            <img src="foto-ibm.jpeg" alt="Your Name" class="profile-photo">
-            <h1>César Carrasco</h1>
-            <p class="tagline">Cloud Builder & AWS Enthusiast</p>
-            <a href="https://builder.aws.com/community/@ceskard26" target="_blank" class="aws-link">AWS Builder Center Profile</a>
-        </section>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">César Carrasco</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌙</button>
+            <button class="mobile-menu" id="mobile-menu">☰</button>
+        </div>
+    </nav>
 
-        <section class="fun-facts">
-            <h3>Fun Facts About Me</h3>
-            <div class="facts-grid">
-                <div class="fact-card">
-                    <h4>🚀 Challenge In Progress</h4>
-                    <p>Currently working on <a href="https://builder.aws.com/content/31C2WxIDSQive7q2Dv5xNFCmYJj/aws-builder-challenge-2-build-a-website-on-the-cloud?trk=86c76c09-e8f4-4138-badc-604ce7bc5d77&sc_channel=el" target="_blank">AWS Builder Challenge #2: Build a website on the cloud!</a></p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                🏆 AWS Builder Challenge Contestant
+            </div>
+            
+            <div class="profile-image">
+                <img src="foto-ibm.jpeg" alt="César Carrasco" loading="lazy">
+            </div>
+            
+            <h1>César Carrasco</h1>
+            <p class="hero-subtitle">
+                Cloud Builder & AWS Enthusiast crafting scalable solutions with cutting-edge technology. 
+                Specializing in CI/CD, containerization, and AI/ML deployments.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    🚀 View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    💬 Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">About Me</h2>
+                <p class="section-subtitle animate-on-scroll">
+                    Passionate cloud developer building the future with AWS technologies
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="animate-on-scroll">
+                    <p class="about-text">
+                        Working at IBM Cloud while exploring the innovative world of AWS, I bring a unique perspective to cloud computing. 
+                        My journey in the AWS Builder Challenge has been transformative, pushing me to create cutting-edge solutions 
+                        that combine traditional enterprise knowledge with modern cloud-native approaches.
+                    </p>
+                    <p class="about-text">
+                        I specialize in automating deployment pipelines, containerizing applications, and implementing AI/ML solutions 
+                        on scalable cloud infrastructure. Every project is an opportunity to learn, innovate, and contribute to the 
+                        ever-evolving landscape of cloud technology.
+                    </p>
                 </div>
-                <div class="fact-card">
-                    <h4>🎯 Fun fact</h4>
-                    <p>Working at IBM Cloud but liking AWS more lol</p>
-                </div>
-                <div class="fact-card">
-                    <h4>💡 Fun Project</h4>
-                    <p>This website is hosted on Amazon S3 with CloudFront for global delivery!</p>
+                
+                <div class="about-stats animate-on-scroll">
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">AWS Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Automation</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Learning</div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="aws-journey">
-            <h3>AWS Builder Challenge #2</h3>
-            <p>I'm currently working on the "Build a website on the cloud" challenge, learning to deploy websites using AWS S3 and CloudFront. This site is part of my challenge progress!</p>
-            <a href="https://builder.aws.com/content/31C2WxIDSQive7q2Dv5xNFCmYJj/aws-builder-challenge-2-build-a-website-on-the-cloud?trk=86c76c09-e8f4-4138-badc-604ce7bc5d77&sc_channel=el" target="_blank" class="cta-button">View Challenge Details</a>
-        </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Technical Skills</h2>
+                <p class="section-subtitle animate-on-scroll">
+                    Technologies and tools I use to build amazing solutions
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-icon">☁️</div>
+                    <h3 class="skill-title">Cloud Platforms</h3>
+                    <ul class="skill-list">
+                        <li>Amazon Web Services (AWS)</li>
+                        <li>IBM Cloud</li>
+                        <li>S3, CloudFront, Lambda</li>
+                        <li>EC2, ECS, CodeDeploy</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-icon">🔄</div>
+                    <h3 class="skill-title">DevOps & CI/CD</h3>
+                    <ul class="skill-list">
+                        <li>GitHub Actions</li>
+                        <li>AWS CodeDeploy</li>
+                        <li>Docker Containers</li>
+                        <li>Automated Pipelines</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-icon">🤖</div>
+                    <h3 class="skill-title">AI/ML & Security</h3>
+                    <ul class="skill-list">
+                        <li>GPT Model Deployment</li>
+                        <li>G4xLarge Instances</li>
+                        <li>Vulnerability Testing</li>
+                        <li>Security Analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-title">Development</h3>
+                    <ul class="skill-list">
+                        <li>Web Development</li>
+                        <li>Infrastructure as Code</li>
+                        <li>API Integration</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- CONTACT FORM SECTION - Added for user contact functionality -->
-        <section class="contact-form">
-            <h3>Get In Touch</h3>
-            <p>Have a question or want to connect? Send me a message!</p>
-            <!-- Form message container for success/error messages -->
-            <div id="form-message" class="form-message" style="display: none;"></div>
-            <form class="contact-form-container">
-                <!-- Contact form input fields -->
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+                <p class="section-subtitle animate-on-scroll">
+                    Showcasing innovation through cloud-native solutions
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">🚀</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Automated Web Deployment</h3>
+                        <p class="project-description">
+                            Containerized web application with automated Git-based deployment pipeline using AWS services. 
+                            Features seamless integration and zero-downtime deployments.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Live →</a>
+                            <a href="#" class="project-link">GitHub →</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">⚡</div>
+                    <div class="project-content">
+                        <h3 class="project-title">GitHub Actions + AWS CodeDeploy</h3>
+                        <p class="project-description">
+                            Fully automated deployment pipeline using GitHub Actions integrated with AWS CodeDeploy. 
+                            Features automated testing, building, and deployment with rollback capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">AWS CodeDeploy</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Testing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Live →</a>
+                            <a href="#" class="project-link">GitHub →</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">🧠</div>
+                    <div class="project-content">
+                        <h3 class="project-title">GPT Model Security Testing</h3>
+                        <p class="project-description">
+                            GPT-2-OS model hosted on AWS G4xLarge instance for advanced vulnerability testing and security analysis. 
+                            Comprehensive AI safety research and penetration testing platform.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">GPT-2</span>
+                            <span class="tech-tag">G4xLarge</span>
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">AI/ML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Research →</a>
+                            <a href="#" class="project-link">Documentation →</a>
+                        </div>
+                    </div>
                 </div>
-                <!-- Contact form submit button -->
-                <button type="submit" class="contact-submit-btn">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Latest Articles</h2>
+                <p class="section-subtitle animate-on-scroll">
+                    Sharing knowledge about cloud computing and modern development
+                </p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-image">📝</div>
+                    <div class="blog-content">
+                        <div class="blog-date">Coming Soon</div>
+                        <h3 class="blog-title">AWS Builder Challenge: My Journey</h3>
+                        <p class="blog-excerpt">
+                            Documenting my experience in the AWS Builder Challenge and the lessons learned while building cloud-native solutions.
+                        </p>
+                    </div>
+                </article>
+                
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-image">🔧</div>
+                    <div class="blog-content">
+                        <div class="blog-date">Coming Soon</div>
+                        <h3 class="blog-title">CI/CD Best Practices with AWS</h3>
+                        <p class="blog-excerpt">
+                            A comprehensive guide to implementing robust CI/CD pipelines using GitHub Actions and AWS CodeDeploy.
+                        </p>
+                    </div>
+                </article>
+                
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-image">🤖</div>
+                    <div class="blog-content">
+                        <div class="blog-date">Coming Soon</div>
+                        <h3 class="blog-title">AI Model Security on AWS</h3>
+                        <p class="blog-excerpt">
+                            Exploring security considerations and vulnerability testing for AI models deployed on AWS infrastructure.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- AWS Challenge Section -->
+    <section class="section aws-challenge-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">AWS Builder Challenge</h2>
+                <p class="section-subtitle animate-on-scroll">
+                    Currently participating in the AWS Builder Challenge #2: Build a website on the cloud
+                </p>
+            </div>
+            
+            <div class="aws-challenge-content">
+                <div class="animate-on-scroll aws-challenge-card">
+                    <h3 class="aws-challenge-title">
+                        🏆 Competing for 1,000 AWS Credits + Custom Mechanical Keyboard
+                    </h3>
+                    <p class="aws-challenge-description">
+                        This website showcases my skills in modern web development, AWS cloud services, and professional design. 
+                        Built with S3, CloudFront, Lambda, and following best practices for performance, security, and user experience.
+                    </p>
+                    <a href="https://builder.aws.com/content/31C2WxIDSQive7q2Dv5xNFCmYJj/aws-builder-challenge-2-build-a-website-on-the-cloud" 
+                       target="_blank" 
+                       class="aws-badge">
+                        🚀 View Challenge Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+                <p class="section-subtitle animate-on-scroll">
+                    Let's connect and discuss cloud computing, AI, or potential collaborations
+                </p>
+            </div>
+            
+            <form class="contact-form animate-on-scroll" id="contact-form">
+                <div id="form-message" class="form-message" style="display: none;"></div>
+                
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-textarea" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary contact-submit-btn">
+                    Send Message 🚀
+                </button>
             </form>
-        </section>
-        <!-- END CONTACT FORM SECTION -->
-    </main>
+            
+            <div class="social-links animate-on-scroll">
+                <a href="https://linkedin.com/in/cesar-carrasco" target="_blank" class="social-link" title="LinkedIn">
+                    💼
+                </a>
+                <a href="https://github.com/ceskard26" target="_blank" class="social-link" title="GitHub">
+                    💻
+                </a>
+                <a href="https://instagram.com/ceskard26" target="_blank" class="social-link" title="Instagram">
+                    📸
+                </a>
+                <a href="https://builder.aws.com/community/@ceskard26" target="_blank" class="social-link" title="AWS Builder">
+                    ☁️
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Your Name. Built with ❤️ on AWS</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 César Carrasco. Built with ❤️ on AWS for the Builder Challenge</p>
+            <p class="footer-subtitle">
+                Hosted on S3 • Delivered by CloudFront • Powered by Lambda
+            </p>
+        </div>
     </footer>
-    
-    <!-- Contact form JavaScript -->
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
-    <script>
-    // Contact form handler - Sends form data to AWS Lambda
-    const LAMBDA_URL = 'https://eujpxsoz2tqoqqk6tnpiqgjbne0oxymx.lambda-url.us-east-2.on.aws/'; // Replace with your Function URL
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.querySelector('.contact-form-container');
-    
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-    
-            const submitBtn = form.querySelector('.contact-submit-btn');
-            const messageDiv = document.getElementById('form-message');
-    
-            // Show loading state
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            messageDiv.style.display = 'none';
-    
-            // Get form data
-            const formData = {
-                name: form.name.value,
-                email: form.email.value,
-                message: form.message.value
-            };
-    
-            try {
-                const response = await fetch(LAMBDA_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-    
-                if (response.ok) {
-                    showMessage('Message sent successfully! Thank you for reaching out.', 'success');
-                    form.reset();
-                } else {
-                    showMessage('Failed to send message. Please try again.', 'error');
-                }
-            } catch (error) {
-                showMessage('Network error. Please check your connection and try again.', 'error');
-            }
-    
-            // Reset button
-            submitBtn.textContent = 'Send Message';
-            submitBtn.disabled = false;
-        });
-    });
-    
-    function showMessage(text, type) {
-        const messageDiv = document.getElementById('form-message');
-        messageDiv.textContent = text;
-        messageDiv.className = `form-message ${type}`;
-        messageDiv.style.display = 'block';
-    
-        // Auto-hide after 10 seconds
-        setTimeout(() => {
-            messageDiv.style.display = 'none';
-        }, 10000);
-    }
-</script>
 </body>
 </html>

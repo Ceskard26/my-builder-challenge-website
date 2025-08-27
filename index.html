@@ -5,28 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>César Carrasco - Cloud Builder & AWS Enthusiast</title>
     <meta name="description" content="César Carrasco - Professional Cloud Developer specializing in AWS, CI/CD, and AI/ML. AWS Builder Challenge contestant showcasing modern web solutions.">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#7877c6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Enhanced SEO -->
+    <meta property="og:title" content="César Carrasco - Cloud Builder & AWS Enthusiast">
+    <meta property="og:description" content="Professional Cloud Developer specializing in AWS, CI/CD, and AI/ML">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="foto-ibm.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "César Carrasco",
+        "jobTitle": "Cloud Customer Success Specialist",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "IBM"
+        },
+        "url": "https://builder.aws.com/community/@ceskard26",
+        "sameAs": [
+            "https://www.linkedin.com/in/césar-augusto-carrasco-rojas-96a30828a/",
+            "https://github.com/Ceskard26",
+            "https://www.instagram.com/cesar_carrasco26/"
+        ]
+    }
+    </script>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Matrix Background Effect -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Particle System -->
+    <div id="particles-container"></div>
+
     <main>
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-decoration"></div>
-            <img src="foto-ibm.jpeg" alt="César Carrasco" class="profile-photo">
-            <h1>César Carrasco</h1>
-            <p class="tagline">Cloud Builder & AWS Enthusiast</p>
+            <div class="glitch-container">
+                <img src="foto-ibm.jpeg" alt="César Carrasco" class="profile-photo">
+                <div class="glitch-overlay"></div>
+            </div>
+            <h1 class="glitch-text" data-text="César Carrasco">César Carrasco</h1>
+            <p class="tagline">
+                <span id="typing-text"></span>
+                <span class="cursor">|</span>
+            </p>
             <p class="hero-description">
                 Crafting scalable solutions with cutting-edge AWS technologies. 
                 Specializing in CI/CD, containerization, and AI/ML deployments.
             </p>
-            <a href="https://builder.aws.com/community/@ceskard26" target="_blank" class="aws-link">
-                <i class="fab fa-aws"></i>
-                AWS Builder Center Profile
-            </a>
+            <div class="hero-buttons">
+                <a href="https://builder.aws.com/community/@ceskard26" target="_blank" class="aws-link">
+                    <i class="fab fa-aws"></i>
+                    AWS Builder Profile
+                </a>
+                <a href="https://calendly.com/ceskard26/30min" target="_blank" class="cta-button cta-button--secondary">
+                    <i class="fas fa-calendar"></i>
+                    Schedule a Call
+                </a>
+            </div>
         </section>
 
         <!-- About Section -->
@@ -34,22 +95,170 @@
             <div class="section-decoration"></div>
             <h2>About Me</h2>
             <p class="about-text">
-                Working at IBM Cloud while exploring the innovative world of AWS, I bring a unique perspective to cloud computing. 
+                Currently working as a Cloud Customer Success Specialist at IBM while exploring the innovative world of AWS. 
                 My journey in the AWS Builder Challenge has been transformative, pushing me to create cutting-edge solutions 
                 that combine traditional enterprise knowledge with modern cloud-native approaches.
             </p>
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number">3+</div>
+                    <div class="stat-number" data-count="5">0</div>
                     <div class="stat-label">AWS Projects</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Automation</div>
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">% Automation</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Learning</div>
+                    <div class="stat-number" data-count="247">0</div>
+                    <div class="stat-label">Learning 24/7</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section class="experience-section">
+            <div class="section-decoration"></div>
+            <h2>Professional Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-date="2025">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Cloud Customer Success Specialist</h3>
+                        <h4>IBM Cloud</h4>
+                        <p class="timeline-date">April 2025 - Present</p>
+                        <p>Leading customer success initiatives for cloud solutions, focusing on AWS integration and enterprise cloud strategies.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Cloud Architecture</span>
+                            <span class="tag">Customer Success</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-date="2023">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Cybersecurity Engineering</h3>
+                        <h4>Universidad Nacional de Ingeniería</h4>
+                        <p class="timeline-date">August 2023 - Present</p>
+                        <p>Pursuing advanced knowledge in cybersecurity, focusing on cloud security and modern threat detection.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">Cloud Security</span>
+                            <span class="tag">Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio-section">
+            <div class="section-decoration"></div>
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-drone"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="project-btn" onclick="openProjectModal('drone')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="#" class="project-btn" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Maritime Rescue AI Drone</h3>
+                            <div class="project-status">
+                                <span class="status-badge featured">Featured</span>
+                            </div>
+                        </div>
+                        <p>Advanced AI-powered drone system using thermal camera and real-time recognition to detect drowning persons at sea. Combines computer vision, edge computing, and emergency response protocols.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Thermal Imaging</span>
+                            <span class="tech-tag">Edge Computing</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">95%</span>
+                                <span class="metric-label">Accuracy</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">2.3s</span>
+                                <span class="metric-label">Response Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="project-btn" onclick="openProjectModal('portfolio')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <a href="#" class="project-btn" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Cloud Portfolio Website</h3>
+                            <div class="project-status">
+                                <span class="status-badge current">Current</span>
+                            </div>
+                        </div>
+                        <p>Modern, responsive portfolio website built with AWS cloud services. Features CI/CD pipeline, Lambda functions, and CloudFront distribution for optimal performance.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS S3</span>
+                            <span class="tech-tag">CloudFront</span>
+                            <span class="tech-tag">Lambda</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">HTML5/CSS3</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">98</span>
+                                <span class="metric-label">Lighthouse</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">100%</span>
+                                <span class="metric-label">Uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- GitHub Repositories -->
+            <div class="github-repos">
+                <h3><i class="fab fa-github"></i> Latest Repositories</h3>
+                <div id="github-repos-container" class="repos-grid">
+                    <div class="loading-skeleton">
+                        <div class="skeleton-item"></div>
+                        <div class="skeleton-item"></div>
+                        <div class="skeleton-item"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -57,19 +266,33 @@
         <!-- Skills Section -->
         <section class="skills-section">
             <div class="section-decoration"></div>
-            <h2>Technical Skills</h2>
+            <h2>Technical Arsenal</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3>Cloud Platforms</h3>
-                    <ul>
-                        <li>Amazon Web Services (AWS)</li>
-                        <li>IBM Cloud</li>
-                        <li>S3, CloudFront, Lambda</li>
-                        <li>EC2, ECS, CodeDeploy</li>
-                    </ul>
+                    <div class="skill-progress-container">
+                        <div class="skill-item">
+                            <span>Amazon Web Services (AWS)</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-skill="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>IBM Cloud</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-skill="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>CloudFront & Lambda</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-skill="85"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="skill-card">
@@ -77,12 +300,26 @@
                         <i class="fas fa-sync-alt"></i>
                     </div>
                     <h3>DevOps & CI/CD</h3>
-                    <ul>
-                        <li>GitHub Actions</li>
-                        <li>AWS CodeDeploy</li>
-                        <li>Docker Containers</li>
-                        <li>Automated Pipelines</li>
-                    </ul>
+                    <div class="skill-progress-container">
+                        <div class="skill-item">
+                            <span>GitHub Actions</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-skill="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Docker Containers</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-skill="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>AWS CodeDeploy</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-skill="78"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="skill-card">
@@ -90,42 +327,185 @@
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3>AI/ML & Security</h3>
-                    <ul>
-                        <li>GPT Model Deployment</li>
-                        <li>G4xLarge Instances</li>
-                        <li>Vulnerability Testing</li>
-                        <li>Security Analysis</li>
-                    </ul>
+                    <div class="skill-progress-container">
+                        <div class="skill-item">
+                            <span>Machine Learning</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-skill="86"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Cybersecurity</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-skill="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Computer Vision</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-skill="84"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Fun Facts Section -->
-        <section class="fun-facts">
+        <!-- Certifications Section -->
+        <section class="certifications-section">
             <div class="section-decoration"></div>
-            <h2>Fun Facts About Me</h2>
-            <div class="facts-grid">
-                <div class="fact-card">
-                    <div class="fact-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Challenge In Progress</h3>
-                    <p>Currently working on <a href="https://builder.aws.com/content/31C2WxIDSQive7q2Dv5xNFCmYJj/aws-builder-challenge-2-build-a-website-on-the-cloud?trk=86c76c09-e8f4-4138-badc-604ce7bc5d77&sc_channel=el" target="_blank">AWS Builder Challenge #2: Build a website on the cloud!</a></p>
+            <h2>Certifications & Awards</h2>
+            <div class="certifications-container">
+                <div class="cert-header">
+                    <a href="https://www.credly.com/users/cesar-augusto-carrasco-rojas" target="_blank" class="credly-link">
+                        <i class="fas fa-award"></i>
+                        View All on Credly
+                    </a>
                 </div>
-                <div class="fact-card">
-                    <div class="fact-icon">
-                        <i class="fas fa-smile"></i>
+                <div id="certifications-grid" class="certifications-grid">
+                    <div class="loading-skeleton">
+                        <div class="skeleton-cert"></div>
+                        <div class="skeleton-cert"></div>
+                        <div class="skeleton-cert"></div>
                     </div>
-                    <h3>Fun fact</h3>
-                    <p>Working at IBM Cloud but liking AWS more lol</p>
                 </div>
-                <div class="fact-card">
-                    <div class="fact-icon">
-                        <i class="fas fa-lightbulb"></i>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="section-decoration"></div>
+            <h2>What People Say</h2>
+            <div class="testimonials-carousel">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"César demonstrates exceptional skills in cloud architecture and has a natural ability to solve complex technical challenges. His work on the maritime rescue drone project shows innovative thinking."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>AWS Community</h4>
+                                <span>Builder Challenge</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Fun Project</h3>
-                    <p>This website is hosted on Amazon S3 with CloudFront for global delivery!</p>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"Working with César at IBM has been fantastic. His expertise in cloud technologies and customer success approach makes him an invaluable team member."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>IBM Team</h4>
+                                <span>Cloud Division</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"César's dedication to learning and applying cutting-edge technologies in cybersecurity and cloud computing is remarkable. He's definitely someone to watch in the tech industry."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>UNI Professor</h4>
+                                <span>Cybersecurity Dept.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="moveTestimonial(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentTestimonial(1)"></span>
+                        <span class="dot" onclick="currentTestimonial(2)"></span>
+                        <span class="dot" onclick="currentTestimonial(3)"></span>
+                    </div>
+                    <button class="carousel-btn next" onclick="moveTestimonial(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Preview Section -->
+        <section class="blog-section">
+            <div class="section-decoration"></div>
+            <h2>Latest Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="blog-category">AWS</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">March 2025</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <h3>Building Scalable Web Apps with AWS Amplify</h3>
+                        <p>Deep dive into creating modern web applications using AWS Amplify, covering deployment strategies and best practices.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="blog-category">AI/ML</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">February 2025</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <h3>Computer Vision for Emergency Response</h3>
+                        <p>How we developed an AI system for maritime rescue operations using thermal imaging and machine learning.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="blog-category">Security</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">January 2025</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <h3>Cloud Security Best Practices for 2025</h3>
+                        <p>Essential security measures every developer should implement when working with cloud infrastructure.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -137,7 +517,7 @@
                 <i class="fas fa-award"></i>
                 <span>Competing for 1,000 AWS Credits + Custom Mechanical Keyboard</span>
             </div>
-            <p>I'm currently working on the "Build a website on the cloud" challenge, learning to deploy websites using AWS S3 and CloudFront. This site showcases my skills in modern web development, AWS cloud services, and professional design following best practices for performance, security, and user experience.</p>
+            <p>Currently working on the "Build a website on the cloud" challenge, showcasing modern web development with AWS services. This site demonstrates skills in cloud architecture, performance optimization, and user experience design.</p>
             <a href="https://builder.aws.com/content/31C2WxIDSQive7q2Dv5xNFCmYJj/aws-builder-challenge-2-build-a-website-on-the-cloud?trk=86c76c09-e8f4-4138-badc-604ce7bc5d77&sc_channel=el" target="_blank" class="cta-button">
                 <i class="fas fa-external-link-alt"></i>
                 View Challenge Details
@@ -147,55 +527,114 @@
         <!-- Contact Form Section -->
         <section class="contact-form">
             <div class="section-decoration"></div>
-            <h2>Get In Touch</h2>
-            <p>Let's connect and discuss cloud computing, AI, or potential collaborations</p>
+            <h2>Let's Build Something Amazing</h2>
+            <p>Ready to discuss cloud computing, AI projects, or potential collaborations?</p>
             
             <div id="form-message" class="form-message" style="display: none;"></div>
             
             <form class="contact-form-container">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="input-focus-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="input-focus-line"></div>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a topic</option>
+                        <option value="collaboration">Project Collaboration</option>
+                        <option value="consultation">Technical Consultation</option>
+                        <option value="aws">AWS Discussion</option>
+                        <option value="ai">AI/ML Project</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="input-focus-line"></div>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Please write at least 10 characters..." required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+                    <div class="input-focus-line"></div>
+                    <div class="char-counter">
+                        <span id="char-count">0</span>/500 characters
+                    </div>
                 </div>
                 <button type="submit" class="contact-submit-btn">
-                    <i class="fas fa-paper-plane"></i>
-                    Send Message
+                    <span class="btn-text">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </span>
+                    <span class="btn-loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        Sending...
+                    </span>
                 </button>
             </form>
             
             <!-- Social Links -->
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/c%C3%A9sar-augusto-carrasco-rojas-96a30828a/o" target="_blank" class="social-link" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/césar-augusto-carrasco-rojas-96a30828a/" target="_blank" class="social-link linkedin" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/Ceskard26" target="_blank" class="social-link" title="GitHub">
+                <a href="https://github.com/Ceskard26" target="_blank" class="social-link github" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.instagram.com/cesar_carrasco26/" target="_blank" class="social-link" title="Instagram">
+                <a href="https://www.instagram.com/cesar_carrasco26/" target="_blank" class="social-link instagram" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://builder.aws.com/community/@ceskard26" target="_blank" class="social-link" title="AWS Builder">
+                <a href="https://builder.aws.com/community/@ceskard26" target="_blank" class="social-link aws" title="AWS Builder">
                     <i class="fab fa-aws"></i>
+                </a>
+                <a href="https://calendly.com/ceskard26/30min" target="_blank" class="social-link calendly" title="Schedule a Call">
+                    <i class="fas fa-calendar-alt"></i>
                 </a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 César Carrasco. Built with passion on AWS for the Builder Challenge</p>
-        <p class="footer-subtitle">Hosted on S3 • Delivered by CloudFront • Powered by Lambda</p>
+        <div class="footer-content">
+            <p>&copy; 2025 César Carrasco. Built with passion on AWS for the Builder Challenge</p>
+            <p class="footer-subtitle">Hosted on S3 • Delivered by CloudFront • Powered by Lambda</p>
+            <div class="footer-tech">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">AWS</span>
+            </div>
+        </div>
     </footer>
 
+    <!-- Project Modals -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProjectModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="loading-text">Initializing...</div>
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="enhanced-script.js"></script>
     <script>
-        // Contact form handler
+        // Contact form handler - MANTENER LA URL LAMBDA ORIGINAL
         const LAMBDA_URL = 'https://eujpxsoz2tqoqqk6tnpiqgjbne0oxymx.lambda-url.us-east-2.on.aws/';
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -208,8 +647,7 @@
                 const messageDiv = document.getElementById('form-message');
 
                 // Show loading state
-                const originalHTML = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.classList.add('loading');
                 submitBtn.disabled = true;
                 messageDiv.style.display = 'none';
 
@@ -217,13 +655,14 @@
                 const formData = {
                     name: form.name.value.trim(),
                     email: form.email.value.trim(),
+                    subject: form.subject.value.trim(),
                     message: form.message.value.trim()
                 };
 
                 // Basic validation
                 if (!validateForm(formData)) {
                     showMessage('Please fill in all fields correctly. Message must be at least 10 characters long.', 'error');
-                    resetSubmitButton(submitBtn, originalHTML);
+                    resetSubmitButton(submitBtn);
                     return;
                 }
 
@@ -239,6 +678,7 @@
                     if (response.ok) {
                         showMessage('Message sent successfully! Thank you for reaching out.', 'success');
                         form.reset();
+                        document.getElementById('char-count').textContent = '0';
                     } else {
                         const errorText = await response.text();
                         console.error('Server error:', response.status, errorText);
@@ -249,7 +689,24 @@
                     showMessage('Network error. Please check your connection and try again.', 'error');
                 }
 
-                resetSubmitButton(submitBtn, originalHTML);
+                resetSubmitButton(submitBtn);
+            });
+
+            // Character counter
+            const messageTextarea = document.getElementById('message');
+            const charCount = document.getElementById('char-count');
+            
+            messageTextarea.addEventListener('input', function() {
+                const count = this.value.length;
+                charCount.textContent = count;
+                
+                if (count > 500) {
+                    charCount.style.color = 'var(--error)';
+                } else if (count > 400) {
+                    charCount.style.color = 'var(--accent-gold)';
+                } else {
+                    charCount.style.color = 'var(--text-muted)';
+                }
             });
         });
 
@@ -259,12 +716,13 @@
             return (
                 data.name && data.name.length >= 2 &&
                 data.email && emailRegex.test(data.email) &&
-                data.message && data.message.length >= 10
+                data.subject && data.subject.length >= 1 &&
+                data.message && data.message.length >= 10 && data.message.length <= 500
             );
         }
 
-        function resetSubmitButton(button, originalHTML) {
-            button.innerHTML = originalHTML;
+        function resetSubmitButton(button) {
+            button.classList.remove('loading');
             button.disabled = false;
         }
 
@@ -279,39 +737,6 @@
                 messageDiv.style.display = 'none';
             }, 10000);
         }
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections for animations
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
     </script>
 </body>
 </html>

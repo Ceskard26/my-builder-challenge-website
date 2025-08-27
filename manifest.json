@@ -1,0 +1,62 @@
+{
+  "name": "César Carrasco - Cloud Builder & AWS Enthusiast",
+  "short_name": "César Carrasco",
+  "description": "Professional Cloud Developer specializing in AWS, CI/CD, and AI/ML",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#7877c6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["technology", "portfolio", "cloud", "aws"],
+  "screenshots": [
+    {
+      "src": "foto-ibm.jpeg",
+      "type": "image/jpeg",
+      "sizes": "400x400",
+      "form_factor": "narrow"
+    }
+  ],
+  "icons": [
+    {
+      "src": "foto-ibm.jpeg",
+      "type": "image/jpeg",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "foto-ibm.jpeg", 
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Portfolio",
+      "short_name": "Portfolio",
+      "description": "View my featured projects",
+      "url": "/#portfolio-section"
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact", 
+      "description": "Get in touch with me",
+      "url": "/#contact-form"
+    },
+    {
+      "name": "AWS Profile",
+      "short_name": "AWS",
+      "description": "View my AWS Builder profile", 
+      "url": "https://builder.aws.com/community/@ceskard26"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "dir": "ltr",
+  "iarc_rating_id": "",
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
